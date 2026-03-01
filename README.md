@@ -1,6 +1,6 @@
 # 📷 JPEG Encoder FPGA IP Core
 
-**📅 最新更新 (2026/02/27)**：完成 DCT 预处理模块 —— **行缓冲（Line Buffer）**，支持将输入图像实时分割为无重叠的 8×8 像素块，为后续 DCT 提供数据流。
+**📅 最新更新 (2026/03/01)**：1D-DCT还没写完 —— **1D-DCT**，流水线实现DCT。
 
 ---
 
@@ -37,3 +37,12 @@
 * 编写基础测试平台，验证功能正确性。
 
 * 延迟估算：7×IMG_WIDTH + 16 周期（待仿真确认）。
+
+# [2026-03-01] 1D-DCT pipeline正在进行
+
+参考以下两篇论文：
+
+E. D. Kusuma and T. S. Widodo, “FPGA implementation of pipelined 2D-DCT and quantization architecture for JPEG image compression,” in *Proceedings of the 2010 International Symposium on Information Technology (ITSim)*, Kuala Lumpur, Malaysia, 2010, vol. 1, pp. 1–6.
+
+M. Kovac and N. Ranganathan, “JAGUAR: A fully pipelined VLSI architecture for JPEG image compression standard,” *Proceedings of the IEEE*, vol. 83, no. 2, pp. 247–258, Feb. 1995. doi: 10.1109/5.364464.
+
